@@ -1,14 +1,28 @@
-const Page = () => (
-  <>
-    <p>
-      <strong>Lynx</strong> builds and deploys software solutions.
-    </p>
-    <p>
-      Busy with our clients' projects, we were unable to build a fancy website.
-      Come back soon.
-    </p>
-    <a href="mailto:hi@lynx.agency">hi@lynx.agency</a>
-  </>
-);
+import styled from "styled-components";
+import Layout from "../components/containers/Layout";
+import Hero from "../components/containers/Hero";
+import { SmallTitle, BigTitle } from "../components/atomics/typography";
 
-export default Page;
+const Center = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export default function Home() {
+  return (
+    <Layout>
+      <Hero>
+        <Center>
+          <BigTitle>Yet another software agency.</BigTitle>
+          <SmallTitle>
+            Founded in 2015, Lynx designs, develops and deploys software
+            solutions for everyone.
+          </SmallTitle>
+        </Center>
+      </Hero>
+      {/* <Title>A software agency.</Title> */}
+    </Layout>
+  );
+}

@@ -1,16 +1,14 @@
-import { AppProps } from "next/app";
-import "../styles/styles.css";
-import Head from "next/head";
+import App from "next/app";
+import { defaultTheme } from "../components/styles/theme";
+import { ThemeProvider } from "styled-components";
 
-function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Head>
-        <title>Lynx</title>
-      </Head>
-      <Component {...pageProps} />
-    </>
-  );
+export default class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <ThemeProvider theme={defaultTheme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    );
+  }
 }
-
-export default App;
