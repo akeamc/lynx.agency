@@ -7,6 +7,5 @@ export default createGlobalStyle`
 
     body {
       margin: 0;
-      background: ${({ theme }) => theme.colors.background}
     }
 `;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const HeroWrapper = styled.div`
   position: relative;
+  background: ${({ theme }) => theme.colors.background};
 `;
 
 const Hero: React.FunctionComponent<{
