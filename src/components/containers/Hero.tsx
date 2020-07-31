@@ -4,7 +4,11 @@ import styled from "styled-components";
 
 const HeroWrapper = styled.div`
   position: relative;
-  background: ${({ theme }) => theme.colors.background};
+  overflow: hidden;
+`;
+
+const HeroContent = styled(Section)`
+  margin-top: var(--section-spacing);
 `;
 
 const Hero: React.FunctionComponent<{
@@ -12,7 +16,7 @@ const Hero: React.FunctionComponent<{
 }> = ({ children }) => {
   return (
     <HeroWrapper>
-      <Section>{children}</Section>
+      <HeroContent>{children}</HeroContent>
     </HeroWrapper>
   );
 };

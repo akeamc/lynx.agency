@@ -8,4 +8,21 @@ export default createGlobalStyle`
     body {
       margin: 0;
     }
+
+    *::selection {
+      color: white;
+      background: red;
+    }
+
+    :root {
+      --section-spacing: 56px;
+
+      @media (min-width: 576px) {
+        --section-spacing: 80px;
+      }
+
+      @media(min-width: 992px) {
+        --section-spacing: 120px;
+      }
+    }
 `;
